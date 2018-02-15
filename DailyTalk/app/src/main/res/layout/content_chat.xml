@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content_chat"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="5"
+        android:background="#B0C6D3"
+        tools:context="firebase.project.com.messenger.views.ChatActivity">
+
+    <LinearLayout
+        android:id="@+id/chat_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/colorPrimary">
+
+            <!--<Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:text="bt"
+            android:id="@+id/bt"
+                />-->
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_event_black_24dp"
+                android:background="?attr/colorPrimary"
+                android:id="@+id/bt"
+                android:layout_marginLeft="20dp"
+                />
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/photoSend"
+            android:src="@drawable/ic_image_black_60dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+                android:id="@+id/edtContent"
+                android:padding="5dp"
+                android:layout_weight="8"
+                android:background="#fff"
+                android:layout_width="0dp"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:hint="메시지"
+                android:layout_height="match_parent"/>
+
+        <ImageView
+                android:padding="5dp"
+                android:id="@+id/senderBtn"
+                android:layout_weight="1"
+                android:src="@mipmap/send_message"
+                android:layout_width="0dp"
+                android:enabled="false"
+                android:clickable="true"
+                android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>
